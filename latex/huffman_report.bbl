@@ -1,0 +1,158 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global/global}
+  \entry{shannon1948mathematical}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=SCE}{%
+         family={Shannon},
+         familyi={S\bibinitperiod},
+         given={Claude\bibnamedelima E},
+         giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nokia Bell Labs}%
+    }
+    \strng{namehash}{SCE1}
+    \strng{fullhash}{SCE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{3}
+    \field{pages}{379\bibrangedash 423}
+    \field{title}{A mathematical theory of communication}
+    \field{volume}{27}
+    \field{journaltitle}{The Bell system technical journal}
+    \field{year}{1948}
+  \endentry
+
+  \entry{huffman1952method}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=HDA}{%
+         family={Huffman},
+         familyi={H\bibinitperiod},
+         given={David\bibnamedelima A},
+         giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{HDA1}
+    \strng{fullhash}{HDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{9}
+    \field{pages}{1098\bibrangedash 1101}
+    \field{title}{A method for the construction of minimum-redundancy codes}
+    \field{volume}{40}
+    \field{journaltitle}{Proceedings of the IRE}
+    \field{year}{1952}
+  \endentry
+
+  \entry{cover2006elements}{book}{}{}
+    \name{author}{2}{}{%
+      {{hash=CTM}{%
+         family={Cover},
+         familyi={C\bibinitperiod},
+         given={Thomas\bibnamedelima M},
+         giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=TJA}{%
+         family={Thomas},
+         familyi={T\bibinitperiod},
+         given={Joy\bibnamedelima A},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {John Wiley \& Sons}%
+    }
+    \strng{namehash}{CTMTJA1}
+    \strng{fullhash}{CTMTJA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{edition}{2nd}
+    \field{title}{Elements of information theory}
+    \list{location}{1}{%
+      {Hoboken, NJ}%
+    }
+    \field{year}{2006}
+  \endentry
+
+  \entry{knuth1985dynamic}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=KDE}{%
+         family={Knuth},
+         familyi={K\bibinitperiod},
+         given={Donald\bibnamedelima E},
+         giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{KDE1}
+    \strng{fullhash}{KDE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{163\bibrangedash 180}
+    \field{title}{Dynamic Huffman coding}
+    \field{volume}{6}
+    \field{journaltitle}{Journal of algorithms}
+    \field{year}{1985}
+  \endentry
+
+  \entry{witten1987arithmetic}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=WIH}{%
+         family={Witten},
+         familyi={W\bibinitperiod},
+         given={Ian\bibnamedelima H},
+         giveni={I\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=NRM}{%
+         family={Neal},
+         familyi={N\bibinitperiod},
+         given={Radford\bibnamedelima M},
+         giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=CJG}{%
+         family={Cleary},
+         familyi={C\bibinitperiod},
+         given={John\bibnamedelima G},
+         giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACM}%
+    }
+    \strng{namehash}{WIHNRMCJG1}
+    \strng{fullhash}{WIHNRMCJG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6}
+    \field{pages}{520\bibrangedash 540}
+    \field{title}{Arithmetic coding for data compression}
+    \field{volume}{30}
+    \field{journaltitle}{Communications of the ACM}
+    \field{year}{1987}
+  \endentry
+\enddatalist
+\endinput

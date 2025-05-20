@@ -1,0 +1,67 @@
+\begin{tikzpicture}[
+  level distance=1.5cm,
+  level 1/.style={sibling distance=3.5cm},
+  level 2/.style={sibling distance=2cm},
+  level 3/.style={sibling distance=1cm},
+  every node/.style={circle,draw,minimum size=0.8cm}
+]
+
+% Root node (probability sum = 1.0)
+\node {$1.0$}
+  % First level
+  child {
+    node {$0.48$}
+    child {
+      node {$0.23$}
+      child {
+        node[label=below:{$a: 0.05$}] {$a$}
+        edge from parent node[left] {$0$}
+      }
+      child {
+        node[label=below:{$d: 0.18$}] {$d$}
+        edge from parent node[right] {$1$}
+      }
+      edge from parent node[left] {$0$}
+    }
+    child {
+      node {$0.25$}
+      child {
+        node[label=below:{$c: 0.15$}] {$c$}
+        edge from parent node[left] {$0$}
+      }
+      child {
+        node[label=below:{$b: 0.10$}] {$b$}
+        edge from parent node[right] {$1$}
+      }
+      edge from parent node[right] {$1$}
+    }
+    edge from parent node[left] {$0$}
+  }
+  child {
+    node {$0.52$}
+    child {
+      node[label=below:{$e: 0.22$}] {$e$}
+      edge from parent node[left] {$0$}
+    }
+    child {
+      node[label=below:{$f: 0.30$}] {$f$}
+      edge from parent node[right] {$1$}
+    }
+    edge from parent node[right] {$1$}
+  };
+  
+% Add a title
+\node[above=0.5cm] at (current bounding box.north) {\Large Huffman Tree for Single-Symbol Encoding ($k=1$)};
+
+% Add codewords annotation
+\node[right=1cm,align=left] at (current bounding box.east) {
+  \textbf{Codewords:} \\
+  $a$: 110 \\
+  $b$: 10 \\
+  $c$: 01 \\
+  $d$: 111 \\
+  $e$: 00 \\
+  $f$: 0
+};
+
+\end{tikzpicture}

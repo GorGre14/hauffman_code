@@ -1,0 +1,49 @@
+\begin{figure}[tbp]
+\centering
+\small
+\begin{algorithm}
+\caption{Huffman Coding Algorithm}\label{alg:huffman}
+\begin{algorithmic}[1]
+\Require A set of symbols $\Sigma$ with probabilities $P$
+\Ensure A prefix-free code for $\Sigma$ minimizing expected length
+\Function{HuffmanCode}{$\Sigma, P$}
+    \State $PQ \gets$ new PriorityQueue() \Comment{Min-heap by probability}
+    \For{each symbol $s \in \Sigma$}
+        \State $PQ$.insert(new Node($P[s]$, $s$, null, null))
+    \EndFor
+    \While{$|PQ| > 1$}
+        \State $left \gets PQ$.extractMin()
+        \State $right \gets PQ$.extractMin()
+        \State $parent \gets$ new Node($left.prob + right.prob$, null, $left$, $right$)
+        \State $PQ$.insert($parent$)
+    \EndWhile
+    \State $root \gets PQ$.extractMin()
+    \State $codes \gets \{\}$ \Comment{Dictionary to store symbol codes}
+    \State TraverseTree($root$, "", $codes$)
+    \State CanonicalRenumbering($codes$) \Comment{Ensures a unique codebook}
+    \State \Return $codes$
+\EndFunction
+
+\Function{TraverseTree}{$node, prefix, codes$}
+    \If{$node.symbol \neq null$} \Comment{Leaf node}
+        \State $codes[node.symbol] \gets prefix$
+    \Else
+        \State TraverseTree($node.left$, $prefix + "0"$, $codes$)
+        \State TraverseTree($node.right$, $prefix + "1"$, $codes$)
+    \EndIf
+\EndFunction
+
+\Function{CanonicalRenumbering}{$codes$}
+    \State $lengths \gets$ Sort symbols by (code length, lexicographic order)
+    \State $codeValue \gets 0$
+    \State $prevLength \gets$ length of first code in $lengths$
+    \For{$(length, symbol)$ in $lengths$}
+        \State $codeValue \gets codeValue \ll (length - prevLength)$ \Comment{Shift when length increases}
+        \State $codes[symbol] \gets$ Binary representation of $codeValue$ with $length$ bits
+        \State $codeValue \gets codeValue + 1$
+        \State $prevLength \gets length$
+    \EndFor
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+\end{figure}
